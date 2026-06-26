@@ -89,39 +89,7 @@ The application showcases enterprise-grade UI/UX principles while emphasizing ac
 
 ---
 
-# 📸 Screenshots
 
-## Hero Section
-
-> Add hero screenshot here
-
-```markdown
-![Hero](./screenshots/hero.png)
-```
-
----
-
-## Features
-
-```markdown
-![Features](./screenshots/features.png)
-```
-
----
-
-## Pricing
-
-```markdown
-![Pricing](./screenshots/pricing.png)
-```
-
----
-
-## Mobile View
-
-```markdown
-![Mobile](./screenshots/mobile.png)
-```
 
 ---
 
