@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #172B36; /* Oceanic Noir */
+  --foreground: #F1F6F4; /* Arctic Powder */
+}
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Hackathon Brand Palette */
+  --color-brand-yellow: #FFC801;          /* Forsythia */
+  --color-brand-orange: #FF9932;          /* Deep Saffron */
+  --color-brand-teal: #114C5A;            /* Nocturnal Expedition */
+  --color-brand-mint: #D9E8E2;            /* Mystic Mint */
+  --color-brand-dark: #172B36;            /* Oceanic Noir */
+  --color-brand-light: #F1F6F4;           /* Arctic Powder */
+}
+
+/* Force headings to render with JetBrains Mono */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  letter-spacing: -0.015em;
+}
+
+/* Custom CSS keyframe animations for premium micro-interactions */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes flowTrack {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page entrance animations */
+.animate-fade-in-up {
+  animation: slideUpFade 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Apply scroll smoothing globally */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom selection styling using brand theme */
+::selection {
+  background: rgba(255, 200, 1, 0.25); /* Forsythia tint */
+  color: #ffffff;
+}
+
+/* Custom scrollbar matching Oceanic Noir and Nocturnal Expedition */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #172B36;
+}
+::-webkit-scrollbar-thumb {
+  background: #114C5A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1a6475;
+}
